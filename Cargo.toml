@@ -29,7 +29,7 @@ chrono = ["dep:chrono"]
 num-traits = "0.2.19"
 
 [dependencies.bevy]
-version = "0.16"
+version = "0.19"
 default-features = false
 features = [
     "bevy_log",
@@ -45,5 +45,5 @@ features = [
 ]
 
 [dev-dependencies.bevy]
-version = "0.16"
+version = "0.19"
 default-features = true

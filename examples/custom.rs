@@ -164,7 +164,7 @@ impl PerfUiEntry for PerfUiTimeSinceLastClick {
 fn handle_click(
     time: Res<Time>,
     mut lastclick: ResMut<TimeSinceLastClick>,
-    mut evr_mouse: EventReader<MouseButtonInput>,
+    mut evr_mouse: MessageReader<MouseButtonInput>,
 ) {
     for ev in evr_mouse.read() {
         if ev.state == ButtonState::Pressed {

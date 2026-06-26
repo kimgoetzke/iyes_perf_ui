@@ -197,13 +197,13 @@ impl<E: PerfUiEntry> PerfUiWidget<E> for E {
                 Text(format!("{}: ", self.label())),
                 TextColor(root.label_color),
                 TextFont {
-                    font: root.font_label.clone(),
-                    font_size: root.fontsize_label,
+                    font: root.font_label.clone().into(),
+                    font_size: FontSize::Px(root.fontsize_label),
                     ..default()
                 },
                 TextLayout {
                     linebreak: LineBreak::NoWrap,
-                    justify: JustifyText::Left,
+                    justify: Justify::Left,
                 },
             )).id();
             commands.entity(e_label_wrapper).add_child(e_label);
@@ -223,14 +223,14 @@ impl<E: PerfUiEntry> PerfUiWidget<E> for E {
             },
             Text(root.text_err.clone()),
             TextFont {
-                font: root.font_value.clone(),
-                font_size: root.fontsize_value,
+                font: root.font_value.clone().into(),
+                font_size: FontSize::Px(root.fontsize_value),
                 ..default()
             },
             TextColor(root.err_color),
             TextLayout {
                 linebreak: LineBreak::NoWrap,
-                justify: JustifyText::Right,
+                justify: Justify::Right,
             },
         )).id();
         commands.entity(e_text_wrapper).add_child(e_text);
@@ -258,16 +258,16 @@ impl<E: PerfUiEntry> PerfUiWidget<E> for E {
                 *text = Text(s);
                 *color = TextColor(new_color);
                 if self.value_highlight(&value) {
-                    font.font = root.font_highlight.clone();
+                    font.font = root.font_highlight.clone().into();
                     entry_highlight = true;
                 } else {
-                    font.font = root.font_value.clone();
+                    font.font = root.font_value.clone().into();
                 }
             } else {
                 let s = root.text_err.clone();
                 *text = Text(s);
                 *color = TextColor(root.err_color);
-                font.font = root.font_value.clone();
+                font.font = root.font_value.clone().into();
             }
             if let Ok(mut entry_bgcolor) = q_widget.get_mut(e_widget) {
                 if entry_highlight {

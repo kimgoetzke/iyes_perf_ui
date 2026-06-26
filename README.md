@@ -1,17 +1,14 @@
 # Customizable Performance/Debug Overlay for Bevy UI
 
-[![Crates.io](https://img.shields.io/crates/v/iyes_perf_ui)](https://crates.io/crates/iyes_perf_ui)
-[![docs](https://docs.rs/iyes_perf_ui/badge.svg)](https://docs.rs/iyes_perf_ui/)
-[![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)](./LICENSE)
+This is a fork of https://github.com/IyesGames/iyes_perf_ui because the core maintainer, [inodentry](https://github.com/inodentry), was unable to keep maintaining the project for personal reasons but no one else was given access to maintain.
 
-Sponsor me:
-
-<a href="https://github.com/sponsors/inodentry"><button class="ghsponsors-button">GitHub Sponsors</button></a>
+---
 
 Bevy Compatibility:
 
 | Bevy Version | Plugin Version |
 |--------------|----------------|
+| `0.19`       | N/A / `main`   |
 | `0.16`       | `0.5`          |
 | `0.15`       | `0.4`          |
 | `0.14`       | `0.3`          |

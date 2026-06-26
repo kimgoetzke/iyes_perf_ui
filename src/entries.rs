@@ -96,7 +96,7 @@ pub(crate) fn predefined_entries_plugin(app: &mut App) {
 ///
 /// This gives you a simple one-liner to spawn a comprehensive Perf UI!
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn(PerfUiAllEntries::default());
 /// ```
 ///
@@ -104,7 +104,7 @@ pub(crate) fn predefined_entries_plugin(app: &mut App) {
 /// just spawn an entity with your desired entries, instead of using
 /// this bundle.
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn((
 ///     PerfUiEntryFPS::default(),
 ///     PerfUiEntryClock::default(),
@@ -161,7 +161,7 @@ pub struct PerfUiAllEntries {
 ///
 /// Also see [`PerfUiAllEntries`].
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn(PerfUiDefaultEntries::default());
 /// ```
 ///
@@ -169,7 +169,7 @@ pub struct PerfUiAllEntries {
 /// just spawn an entity with your desired entries, instead of using
 /// this bundle.
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn((
 ///     PerfUiEntryFPS::default(),
 ///     PerfUiEntryClock::default(),
@@ -193,7 +193,7 @@ pub struct PerfUiDefaultEntries {
 
 /// All entries related to framerate.
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn((
 ///     PerfUiFramerateEntries::default(),
 ///     // ...
@@ -212,7 +212,7 @@ pub struct PerfUiFramerateEntries {
 
 /// All entries related to rendering.
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn((
 ///     PerfUiRenderEntries::default(),
 ///     // ...
@@ -227,7 +227,7 @@ pub struct PerfUiRenderEntries {
 
 /// All entries related to system diagnostics.
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn((
 ///     PerfUiSystemEntries::default(),
 ///     // ...
@@ -243,7 +243,7 @@ pub struct PerfUiSystemEntries {
 
 /// All entries related to fixed timestep.
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn((
 ///     PerfUiFixedTimeEntries::default(),
 ///     // ...
@@ -258,7 +258,7 @@ pub struct PerfUiFixedTimeEntries {
 
 /// All entries related to windowing.
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn((
 ///     PerfUiWindowEntries::default(),
 ///     // ...
