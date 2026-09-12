@@ -23,13 +23,13 @@
 //!
 //! First, make sure to add the plugin to your app:
 //!
-//! ```rust
+//! ```rust,ignore
 //! app.add_plugins(PerfUiPlugin);
 //! ```
 //!
 //! And then, pawning a Perf UI can be as simple as:
 //!
-//! ```rust
+//! ```rust,ignore
 //! commands.spawn(PerfUiAllEntries::default());
 //! ```
 //!
@@ -37,7 +37,7 @@
 //! just spawn an entity with your desired entries, instead
 //! of using this bundle.
 //!
-//! ```rust
+//! ```rust,ignore
 //! commands.spawn((
 //!     PerfUiEntryFPS::default(),
 //!     PerfUiEntryClock::default(),

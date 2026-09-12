@@ -185,7 +185,7 @@ where
     ) -> Entity {
         let e_bar_outer = commands.spawn((
             BackgroundColor(self.bar_background),
-            BorderColor::from(self.bar_border_color),
+            BorderColor::all(self.bar_border_color),
             Node {
                 border: UiRect::all(Val::Px(self.bar_border_px)),
                 height: if let Some(h) = self.bar_height_px {
@@ -283,8 +283,8 @@ where
                 },
                 Text(root.text_err.clone()),
                 TextFont {
-                    font: root.font_value.clone(),
-                    font_size: root.fontsize_value,
+                    font: root.font_value.clone().into(),
+                    font_size: FontSize::Px(root.fontsize_value),
                     ..default()
                 },
                 TextColor(self.text_color_override .unwrap_or(root.err_color))
@@ -321,8 +321,8 @@ where
             let e_label = commands.spawn((
                 Text(format!("{}: ", self.entry.label())),
                 TextFont {
-                    font: root.font_label.clone(),
-                    font_size: root.fontsize_label,
+                    font: root.font_label.clone().into(),
+                    font_size: FontSize::Px(root.fontsize_label),
                     ..default()
                 },
                 TextColor(root.label_color)
@@ -397,9 +397,9 @@ where
                     let s = self.entry.format_value(&value);
                     *text = Text(s.trim().to_owned());
                     if entry_highlight {
-                        font.font = root.font_highlight.clone();
+                        font.font = root.font_highlight.clone().into();
                     } else {
-                        font.font = root.font_value.clone();
+                        font.font = root.font_value.clone().into();
                     }
                     if self.text_color_override.is_none() {
                         let new_color = self.entry.value_color(&value)
@@ -408,7 +408,7 @@ where
                     }
                 } else {
                     *text = Text(root.text_err.trim().to_owned());
-                    font.font = root.font_value.clone();
+                    font.font = root.font_value.clone().into();
                     if self.text_color_override.is_none() {
                         *color = TextColor(root.err_color);
                     }

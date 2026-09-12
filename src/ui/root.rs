@@ -24,7 +24,7 @@ pub enum PerfUiPosition {
 /// To create a Perf UI, spawn an entity with this component
 /// + any components for the entries you want to display:
 ///
-/// ```rust
+/// ```rust,ignore
 /// commands.spawn((
 ///     PerfUiRoot {
 ///         // ... settings ...
