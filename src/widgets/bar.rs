@@ -185,7 +185,7 @@ where
     ) -> Entity {
         let e_bar_outer = commands.spawn((
             BackgroundColor(self.bar_background),
-            BorderColor(self.bar_border_color),
+            BorderColor::from(self.bar_border_color),
             Node {
                 border: UiRect::all(Val::Px(self.bar_border_px)),
                 height: if let Some(h) = self.bar_height_px {
