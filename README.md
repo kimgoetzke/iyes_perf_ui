@@ -4,7 +4,7 @@ This is a fork of [github.com/IyesGames/iyes_perf_ui](https://github.com/IyesGam
 
 iyes_perf_ui is a performance/debug overlay for the [Bevy game engine](https://bevyengine.org). I use it in [github.com/kimgoetzke/procedural-generation-2](https://github.com/kimgoetzke/procedural-generation-2).
 
-It is compatible with Bevy `0.19`.
+It is compatible with Bevy `0.20` and requires Rust `1.97.1` or newer.
 
 ---
 
